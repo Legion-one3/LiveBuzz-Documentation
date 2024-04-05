@@ -82,94 +82,96 @@
                 <li>No automatic updates</li> 
 
                 <li>Add OpenSSH server (use space to select and enter to continue)</li> 
-
-                    
-
-                    Configuring the Server 
-
-                    
-
-                    Make a note of the IP address using ifconfig on the server 
-
-                    Open Ubuntu on your own laptop 
-
-                    Ensure you have pulled any updates to your onsite-setup project (cd onsite-setup/) 
-
-                    Run the bash prepare.sh from your own onsite-setup project 
-
-                    Desired Node Number 
-
-                    Run the sudo bash /home/livebuzz/onsite-setup/sudo.guest.install.sh on server 
-
-                    Installing database on the server  
-
-                    Go to LiveControl and start replication recording, then replication syncing 
-
-                    Go to exports then Add campaign, select desired database, enter name, before pressing enter make sure no one is currently creating a record 
-
-                    ssh to server 
-
-                    cd onsite-setup/ 
-
-                    To set up a database on the server run bash technical-manager-control.sh script to import control database - your machine 
-
-                    Enter nodes you want to install the database on 
-
-                    Go onto live control and get file name from database exports 
-
-                    Get LiveControl version from database dashboard 
+                
+                </ul>
 
                     <hr>
 
-                    Installing CUPS 
+                    <h3>Configuring the Server</h3> 
 
-                    
+                <ul>
 
-                    On the server type sudo apt-get update 
+                <li>Make a note of the IP address using ifconfig on the server</li>
 
-                    sudo apt-get install cups cups-bsd 
+                <li>Open Ubuntu on your own laptop</li> 
 
-                    cupsctl --remote-admin --remote-any 
+                <li>Ensure you have pulled any updates to your onsite-setup project (cd onsite-setup/)</li> 
 
-                    sudo nano /etc/cups/cupsd.conf 
+                <li>Run the bash prepare.sh from your own onsite-setup project</li> 
 
-                    Find DefaultAuthType and change from Basic to None 
+                <li>Desired Node Number</li> 
 
-                    Comment out any lines starting with Require User – use # 
+                <li>Run the sudo bash /home/livebuzz/onsite-setup/sudo.guest.install.sh on server</li> 
 
-                    Save the file with Ctrl+X and then press Y then press Enter
-                    
+                <li>Installing database on the server</li>  
+
+                <li>Go to LiveControl and start replication recording, then replication syncing</li> 
+
+                <li>Go to exports then Add campaign, select desired database, enter name, before pressing enter make sure no one is currently creating a record</li> 
+
+                <li>ssh to server</li> 
+
+                <li>cd onsite-setup/</li> 
+
+                <li>To set up a database on the server run bash technical-manager-control.sh script to import control database - your machine</li> 
+
+                <li>Enter nodes you want to install the database on</li> 
+
+                <li>Go onto live control and get file name from database exports</li> 
+
+                <li>Get LiveControl version from database dashboard</li>
+
+                </ul>
                     <hr>
 
-                    Setup Printers 
+                    <h3>Installing CUPS</h3> 
 
-                    
+                <ul>
 
-                    Download the printer-install folder from printer-install  
+                    <li>On the server type sudo apt-get update</li>
 
-                    sftp the folder to the home/livebuzz directory (do this from cmd, not Ubuntu): 
+                    <li>sudo apt-get install cups cups-bsd</li> 
 
-                    sftp livebuzz@{serverIP} 
+                    <li>cupsctl --remote-admin --remote-any</li> 
 
-                    put -r /path/to/printer-install/on/local/machine /home/livebuzz 
+                    <li>sudo nano /etc/cups/cupsd.conf</li> 
 
-                    exit  
+                    <li>Find DefaultAuthType and change from Basic to None</li> 
 
-                    Run install script: 
+                    <li>Comment out any lines starting with Require User – use #</li> 
 
-                    cd /home/livebuzz/printer-install (skip this step on some machines)  
+                    <li>Save the file with Ctrl+X and then press Y then press Enter</li>
+                </ul>    
+                    <hr>
 
-                    (ssh into server from your machine from this part onwards) 
+                    <h3>Setup Printers</h3> 
+                <ul>
 
-                    sudo su 
+                    <li>Download the printer-install folder from printer-install</li>  
 
-                    chmod +x install.sh 
+                    <li>sftp the folder to the home/livebuzz directory (do this from cmd, not Ubuntu):</li> 
 
-                    ./install.sh 
+                    <li>sftp livebuzz@{serverIP}</li> 
 
-                    Check CUPS using your browser and go to {serverIP}:631  
+                    <li>put -r /path/to/printer-install/on/local/machine /home/livebuzz</li> 
 
-                    Then click printer tab to see list of printers available 
+                    <li>exit</li>  
+
+                    <li>Run install script:</li> 
+
+                    <li>cd /home/livebuzz/printer-install (skip this step on some machines)</li>  
+
+                    <li>(ssh into server from your machine from this part onwards)</li> 
+
+                    <li>sudo su</li> 
+
+                    <li>chmod +x install.sh</li> 
+
+                    <li>./install.sh</li> 
+
+                    <li>Check CUPS using your browser and go to {serverIP}:631</li>  
+
+                    <li>Then click printer tab to see list of printers available</li> 
 
                 </ul>
             </div>
