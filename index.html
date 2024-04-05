@@ -25,34 +25,149 @@
                     Returning to the workforce after a period of parental leave, and having recently completed a Level 3 certification in software development, I am looking for an entry point into the IT industry to begin the next phase of my career and continue growing my knowledge and experience. Through reskilling in my spare time I expanded my knowledge in various programming languages and practices as well as project management, including sufficient documentation of software cycles. Also completion of a Level 2 Diploma in IT systems and support, which allowed me to gain experience in areas such as; cloud services and active directories, network security, managing users and permissions along with installing and configuring operating systems and networks
                 </p>
             </div>
-            <div class="Education">
-                <h2>Education</h2>
+            <div class="onsite-server">
+                <h2>Building an onsite server</h2>
                 <p>
-                    Code Institute Level 3 software development: 
- Project management -
- Programming implementation -
- Object-oriented programming -
- Programming with javascript -
- Software testing
+                    
+                    Ensure ethernet cable is connected for auto network config 
 
-<hr>
+                    Ensure secure boot is disabled from the BIOS menu (if BIOS password try “essaparb”) 
 
-C&G Level 2 diploma in IT systems support: 
-customer support provision -
-Principles of IT systems and data security -
-presentation software -
-install and configure ICT equipment and OS -
-install, configure and test ICT networks 
+                    Ensure disk is set to AHCI (not Raid) 
 
-<hr>
+                    Boot from USB via Boot Menu (usually F12) 
 
-C&G level 2 diploma in IT systems and principles for ICT professionals: 
-customer support provision -
- principles and concepts of cloud computing -
- IT fundamentals
+                    Install Ubuntu Server 
 
- <hr>
- GCSE's from Aylesford secondary school and sixth form college
+                    English 
+
+                    United Kingdom 
+
+                    Detect Keyboard Layout – No 
+
+                    English (UK) 
+
+                    English (UK) 
+
+                    When prompted for a hostname, enter BUZZ-00{node} (node number must be pre-allocated) 
+
+                    Full name – livebuzz 
+
+                    Username – livebuzz 
+
+                    Password – Usual 
+
+                    Encrypt – Yes 
+
+                    Timezone – No 
+
+                    Yes 
+
+                    Use entire disk and set up LVM 
+
+                    Select partition  
+
+                    LVM – Yes 
+
+                    Write the changes to disk and configure LVM - Yes 
+
+                    Hit enter (Yes/Continue) 
+
+                    UEFI – Yes 
+
+                    Writes changes – Yes 
+
+                    Proxy – none 
+
+                    No automatic updates 
+
+                    Add OpenSSH server (use space to select and enter to continue) 
+
+                    
+
+                    Configuring the Server 
+
+                    
+
+                    Make a note of the IP address using ifconfig on the server 
+
+                    Open Ubuntu on your own laptop 
+
+                    Ensure you have pulled any updates to your onsite-setup project (cd onsite-setup/) 
+
+                    Run the bash prepare.sh from your own onsite-setup project 
+
+                    Desired Node Number 
+
+                    Run the sudo bash /home/livebuzz/onsite-setup/sudo.guest.install.sh on server 
+
+                    Installing database on the server  
+
+                    Go to LiveControl and start replication recording, then replication syncing 
+
+                    Go to exports then Add campaign, select desired database, enter name, before pressing enter make sure no one is currently creating a record 
+
+                    ssh to server 
+
+                    cd onsite-setup/ 
+
+                    To set up a database on the server run bash technical-manager-control.sh script to import control database - your machine 
+
+                    Enter nodes you want to install the database on 
+
+                    Go onto live control and get file name from database exports 
+
+                    Get LiveControl version from database dashboard 
+
+                    
+
+                    Installing CUPS 
+
+                    
+
+                    On the server type sudo apt-get update 
+
+                    sudo apt-get install cups cups-bsd 
+
+                    cupsctl --remote-admin --remote-any 
+
+                    sudo nano /etc/cups/cupsd.conf 
+
+                    Find DefaultAuthType and change from Basic to None 
+
+                    Comment out any lines starting with Require User – use # 
+
+                    Save the file with Ctrl+X and then press Y then press Enter 
+
+                    Setup Printers 
+
+                    
+
+                    Download the printer-install folder from printer-install  
+
+                    sftp the folder to the home/livebuzz directory (do this from cmd, not Ubuntu): 
+
+                    sftp livebuzz@{serverIP} 
+
+                    put -r /path/to/printer-install/on/local/machine /home/livebuzz 
+
+                    exit  
+
+                    Run install script: 
+
+                    cd /home/livebuzz/printer-install (skip this step on some machines)  
+
+                    (ssh into server from your machine from this part onwards) 
+
+                    sudo su 
+
+                    chmod +x install.sh 
+
+                    ./install.sh 
+
+                    Check CUPS using your browser and go to {serverIP}:631  
+
+                    Then click printer tab to see list of printers available 
 
                 </p>
             </div>
