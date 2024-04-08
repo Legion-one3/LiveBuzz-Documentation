@@ -66,4 +66,94 @@
         
         </ul>
 
+            <hr>
+
+            <h3>Configuring the Server</h3> 
+
+        <ul>
+
+        <li>Make a note of the IP address using ifconfig on the server</li>
+
+        <li>Open Ubuntu on your own laptop</li> 
+
+        <li>Ensure you have pulled any updates to your onsite-setup project (cd onsite-setup/)</li> 
+
+        <li>Run the bash prepare.sh from your own onsite-setup project</li> 
+
+        <li>Desired Node Number</li> 
+
+        <li>Run the sudo bash /home/livebuzz/onsite-setup/sudo.guest.install.sh on server</li> 
+
+        <li>Installing database on the server</li>  
+
+        <li>Go to LiveControl and start replication recording, then replication syncing</li> 
+
+        <li>Go to exports then Add campaign, select desired database, enter name, before pressing enter make sure no one is currently creating a record</li> 
+
+        <li>ssh to server</li> 
+
+        <li>cd onsite-setup/</li> 
+
+        <li>To set up a database on the server run bash technical-manager-control.sh script to import control database - your machine</li> 
+
+        <li>Enter nodes you want to install the database on</li> 
+
+        <li>Go onto live control and get file name from database exports</li> 
+
+        <li>Get LiveControl version from database dashboard</li>
+
+        </ul>
+            <hr>
+
+            <h3>Installing CUPS</h3> 
+
+        <ul>
+
+            <li>On the server type sudo apt-get update</li>
+
+            <li>sudo apt-get install cups cups-bsd</li> 
+
+            <li>cupsctl --remote-admin --remote-any</li> 
+
+            <li>sudo nano /etc/cups/cupsd.conf</li> 
+
+            <li>Find DefaultAuthType and change from Basic to None</li> 
+
+            <li>Comment out any lines starting with Require User – use #</li> 
+
+            <li>Save the file with Ctrl+X and then press Y then press Enter</li>
+        </ul>    
+            <hr>
+
+            <h3>Setup Printers</h3> 
+        <ul>
+
+            <li>Download the printer-install folder from printer-install</li>  
+
+            <li>sftp the folder to the home/livebuzz directory (do this from cmd, not Ubuntu):</li> 
+
+            <li>sftp livebuzz@{serverIP}</li> 
+
+            <li>put -r /path/to/printer-install/on/local/machine /home/livebuzz</li> 
+
+            <li>exit</li>  
+
+            <li>Run install script:</li> 
+
+            <li>cd /home/livebuzz/printer-install (skip this step on some machines)</li>  
+
+            <li>(ssh into server from your machine from this part onwards)</li> 
+
+            <li>sudo su</li> 
+
+            <li>chmod +x install.sh</li> 
+
+            <li>./install.sh</li> 
+
+            <li>Check CUPS using your browser and go to {serverIP}:631</li>  
+
+            <li>Then click printer tab to see list of printers available</li> 
+
+        </ul>
+
 </body>
