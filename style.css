@@ -72,7 +72,7 @@ links2socials{
 /* dropdown menu style*/
 
 /* Dropdown Button */
-.dropbtn button:hover{
+.dropbtn {
     background-color: #444;
     border: none;
     color: white;
