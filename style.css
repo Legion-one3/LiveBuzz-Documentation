@@ -60,54 +60,6 @@ main {
 .mt {
     padding-bottom: 14rem;
 }
-/*contact form*/
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    max-height: 100vh;
-    padding: 20px;
-    margin: auto;
-    margin-top: 2rem;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    background-color: darkcyan;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    border-radius: 25px;
-    
-}
-
-.contact-form label {
-    margin-top: 10px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    width: 30%;
-    margin: auto;
-    border-radius: 5px;
-    margin-top: 5rem;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #444;
-}
 
 links2socials{
   text-align: center;
@@ -120,7 +72,7 @@ links2socials{
 /* dropdown menu style*/
 
 /* Dropdown Button */
-.dropbtn {
+.dropbtn button:hover{
     background-color: #444;
     border: none;
     color: white;
