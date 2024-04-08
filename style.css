@@ -27,7 +27,7 @@ nav {
 }
 
 .nav-button:hover {
-    background-color: #555; 
+    background-color: #bcbcbc; 
     color: #fff;
  } 
 main {
@@ -38,7 +38,7 @@ main {
 .left-section {
     flex: 1;
     padding: 20px;
-    background-color: darkslategray;
+    background-color: #bcbcbc;
     text-align: center;
 }
 
